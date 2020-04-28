@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./App.module.css";
+import styles from "./app.module.css";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className={styles.app}>
       <h1>Image Flipper</h1>
     </div>
   );
