@@ -5,15 +5,17 @@ import Grid from "../grid/grid";
 import UrlInput from "../url-input/url-input";
 
 function App() {
-  const [url, setUrl] = useState("");
+  const [selectedUrl, setSelectedUrl] = useState("");
+  const [displayedUrl, setDisplayedUrl] = useState("");
 
-  const changeUrl = (event) => setUrl(event.target.value);
+  const changeUrl = (event) => setSelectedUrl(event.target.value);
+  const changeDisplayedUrl = () => setDisplayedUrl(selectedUrl);
 
   return (
     <div className={styles.app}>
       <Title />
-      <Grid url={url} />
-      <UrlInput changeUrl={changeUrl} />
+      <Grid url={displayedUrl} />
+      <UrlInput changeUrl={changeUrl} changeDisplayedUrl={changeDisplayedUrl} />
     </div>
   );
 }
