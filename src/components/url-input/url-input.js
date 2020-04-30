@@ -1,5 +1,5 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
+import TextField from "../common/text-field";
 import ImageSearchIcon from "@material-ui/icons/ImageSearch";
 import Button from "../common/button";
 import Grid from "@material-ui/core/Grid";
@@ -16,11 +16,7 @@ const UrlInput = ({ changeUrl, changeDisplayedUrl }) => {
           <TextField
             label="Image URL"
             onChange={changeUrl}
-            InputProps={{
-              style: {
-                width: "300px",
-              },
-            }}
+            inputProps={{ width: "300px" }}
           />
         </Grid>
       </Grid>

@@ -4,9 +4,7 @@
   left: 10px;
   display: flex;
 }
-.urlInputContainer__input {
-  width: 1000px;
-}
+
 .urlInputContainer__button {
   position: relative;
   top: 12px;

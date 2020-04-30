@@ -9,7 +9,10 @@ function App() {
   const [displayedUrl, setDisplayedUrl] = useState("");
 
   const changeUrl = (event) => setSelectedUrl(event.target.value);
-  const changeDisplayedUrl = () => setDisplayedUrl(selectedUrl);
+  const changeDisplayedUrl = () => {
+    if (selectedUrl.replace(/\s/g, "").length > 0) setDisplayedUrl(selectedUrl);
+    else alert("Please enter an image url before clicking DISPLAY.");
+  };
 
   return (
     <div className={styles.app}>
