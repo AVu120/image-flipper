@@ -1,6 +1,1 @@
 @import "../../app/app.module.css";
-
-img {
-  height: var(--imageHeight);
-  width: var(--imageWidth);
-}

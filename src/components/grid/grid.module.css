@@ -5,12 +5,23 @@
   grid-template-columns: auto auto;
 }
 
-.grid__image {
+.grid__imageBorder {
   border: 3px solid black;
-  height: var(--imageHeight);
-  width: var(--imageWidth);
-  /* padding: 10px; */
+  height: 400px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.grid__image {
+  /* border: 3px solid black; */
+  height: 300px;
+  width: 300px;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  transform: var(--rotation);
+  /* line-height: 50px; */
+  /* text-align: center;
+  padding-top: 50px; */
 }
