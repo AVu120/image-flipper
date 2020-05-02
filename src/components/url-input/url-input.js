@@ -1,6 +1,6 @@
 import React from "react";
 import TextField from "../common/text-field";
-import ImageSearchIcon from "@material-ui/icons/ImageSearch";
+import SearchIcon from "../icons/search-icon";
 import Button from "../common/button";
 import Grid from "@material-ui/core/Grid";
 import styles from "./url-input.module.css";
@@ -9,14 +9,15 @@ const UrlInput = ({ changeUrl, changeDisplayedUrl }) => {
   return (
     <div className={styles.urlInputContainer}>
       <Grid container spacing={1} alignItems="flex-end">
-        <Grid item>
-          <ImageSearchIcon />
-        </Grid>
+        <Grid item>{/* <SearchIcon /> */}</Grid>
         <Grid item>
           <TextField
-            label="Image URL"
+            label="Enter image URL:"
             onChange={changeUrl}
             inputProps={{ width: "300px" }}
+            variant="standard"
+            type="text"
+            color="secondary"
           />
         </Grid>
       </Grid>

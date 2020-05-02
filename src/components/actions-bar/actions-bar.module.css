@@ -1,0 +1,24 @@
+.actionsBar {
+  height: 500px;
+  width: auto;
+  border: 3px solid black;
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+.actionsBar__title {
+  color: #f50057;
+}
+
+.actionsBar__numberField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionsBar__rotateIcon {
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+}
