@@ -54,7 +54,7 @@ function App() {
         (_) => _ !== newSelection
       );
     } else {
-      currentlySelectedImages.push(newSelection);
+      currentlySelectedImages = currentlySelectedImages.concat(newSelection);
     }
     setSelectedImages(currentlySelectedImages);
   };
