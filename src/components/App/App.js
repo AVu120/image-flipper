@@ -15,6 +15,7 @@ function App() {
     bottomLeft: 0,
     bottomRight: 0,
   });
+  const [selectedImages, setSelectedImages] = useState([]);
 
   const changeDegrees = (event) => setDegrees(event.target.value);
   const changeRotation = () => {
@@ -34,11 +35,28 @@ function App() {
     else alert("Please enter an image url before clicking DISPLAY.");
   };
 
+  const changeSelectedImages = (newSelection) => {
+    let currentlySelectedImages = selectedImages;
+    if (currentlySelectedImages.includes(newSelection)) {
+      currentlySelectedImages = currentlySelectedImages.filter(
+        (_) => _ !== newSelection
+      );
+    } else {
+      currentlySelectedImages.push(newSelection);
+    }
+    setSelectedImages(currentlySelectedImages);
+  };
+
   return (
     <div className={styles.app}>
       <Title />
       <div className={styles.app__gridActionsBarContainer}>
-        <Grid url={displayedUrl} rotation={rotation} />
+        <Grid
+          url={displayedUrl}
+          rotation={rotation}
+          changeSelectedImages={changeSelectedImages}
+          selectedImages={selectedImages}
+        />
         <ActionsBar
           changeDegrees={changeDegrees}
           changeRotation={changeRotation}

@@ -1,7 +1,8 @@
-/* :root {
-  --imageHeight: 350px;
-  --imageWidth: 350px;
-} */
+:root {
+  /* --imageHeight: 350px;
+  --imageWidth: 350px; */
+  --actionColor: #f50057;
+}
 
 .app {
   height: 100vh;
