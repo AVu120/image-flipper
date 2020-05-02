@@ -48,13 +48,13 @@ function App() {
   };
 
   const changeSelectedImages = (newSelection) => {
-    let currentlySelectedImages = selectedImages;
-    if (currentlySelectedImages.includes(newSelection)) {
-      currentlySelectedImages = currentlySelectedImages.filter(
+    let currentlySelectedImages;
+    if (selectedImages.includes(newSelection)) {
+      currentlySelectedImages = selectedImages.filter(
         (_) => _ !== newSelection
       );
     } else {
-      currentlySelectedImages = currentlySelectedImages.concat(newSelection);
+      currentlySelectedImages = selectedImages.concat(newSelection);
     }
     setSelectedImages(currentlySelectedImages);
   };
