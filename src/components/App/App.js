@@ -21,10 +21,22 @@ function App() {
   const changeRotation = () => {
     if (degrees && degrees < 360)
       setRotation({
-        topLeft: degrees,
-        topRight: degrees,
-        bottomLeft: degrees,
-        bottomRight: degrees,
+        topLeft:
+          selectedImages && selectedImages.includes("topLeft")
+            ? degrees
+            : rotation.topLeft,
+        topRight:
+          selectedImages && selectedImages.includes("topRight")
+            ? degrees
+            : rotation.topRight,
+        bottomLeft:
+          selectedImages && selectedImages.includes("bottomLeft")
+            ? degrees
+            : rotation.bottomLeft,
+        bottomRight:
+          selectedImages && selectedImages.includes("bottomRight")
+            ? degrees
+            : rotation.bottomRight,
       });
     else alert("Please enter a number between 0 and 360.");
   };
