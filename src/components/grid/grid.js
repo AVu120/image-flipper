@@ -11,13 +11,7 @@ const Grid = ({
   isHorizontallyFlipped,
   isVerticallyFlipped,
 }) => {
-  const flipHorizontally = (value) => {
-    return value ? `rotateY(180deg)` : `rotateY(0deg)`;
-  };
-  const flipVertically = (value) => {
-    return value ? `rotateX(180deg)` : `rotateX(0deg)`;
-  };
-
+  // Generate each image's style object based on props.
   const modifyImage = (
     degrees,
     gridPosition,
