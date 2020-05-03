@@ -5,7 +5,14 @@ import styles from "./grid.module.css";
 const nonSelectedBorder = "3px solid black";
 const selectedBorder = "3px solid #f50057";
 
-const Grid = ({ url, rotation, changeSelectedImages, selectedImages }) => {
+const Grid = ({
+  url,
+  rotation,
+  changeSelectedImages,
+  selectedImages,
+  isHorizontallyFlipped,
+  isVerticallyFlipped,
+}) => {
   return (
     <div className={styles.grid}>
       <div
@@ -17,10 +24,19 @@ const Grid = ({ url, rotation, changeSelectedImages, selectedImages }) => {
               ? selectedBorder
               : nonSelectedBorder
           }`,
+          "--horizontalInversion": isHorizontallyFlipped.topLeft
+            ? `rotateY(180deg)`
+            : `rotateY(0deg)`,
+          "--verticalInversion": isVerticallyFlipped.topLeft
+            ? `rotateX(180deg)`
+            : `rotateX(0deg)`,
         }}
         onClick={() => changeSelectedImages("topLeft")}
       >
-        <Image className={styles.grid__image} url={url} />
+        <Image
+          className={`${styles.grid__image} ${styles.grid__image_horizontallyFlipped}`}
+          url={url}
+        />
       </div>
       <div
         className={styles.grid__imageBorder}
@@ -31,6 +47,12 @@ const Grid = ({ url, rotation, changeSelectedImages, selectedImages }) => {
               ? selectedBorder
               : nonSelectedBorder
           }`,
+          "--horizontalInversion": isHorizontallyFlipped.topRight
+            ? `rotateY(180deg)`
+            : `rotateY(0deg)`,
+          "--verticalInversion": isVerticallyFlipped.topRight
+            ? `rotateX(180deg)`
+            : `rotateX(0deg)`,
         }}
         onClick={() => changeSelectedImages("topRight")}
       >
@@ -45,6 +67,12 @@ const Grid = ({ url, rotation, changeSelectedImages, selectedImages }) => {
               ? selectedBorder
               : nonSelectedBorder
           }`,
+          "--horizontalInversion": isHorizontallyFlipped.bottomLeft
+            ? `rotateY(180deg)`
+            : `rotateY(0deg)`,
+          "--verticalInversion": isVerticallyFlipped.bottomLeft
+            ? `rotateX(180deg)`
+            : `rotateX(0deg)`,
         }}
         onClick={() => changeSelectedImages("bottomLeft")}
       >
@@ -59,6 +87,12 @@ const Grid = ({ url, rotation, changeSelectedImages, selectedImages }) => {
               ? selectedBorder
               : nonSelectedBorder
           }`,
+          "--horizontalInversion": isHorizontallyFlipped.bottomRight
+            ? `rotateY(180deg)`
+            : `rotateY(0deg)`,
+          "--verticalInversion": isVerticallyFlipped.bottomRight
+            ? `rotateX(180deg)`
+            : `rotateX(0deg)`,
         }}
         onClick={() => changeSelectedImages("bottomRight")}
       >

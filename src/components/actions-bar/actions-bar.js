@@ -1,9 +1,17 @@
 import React from "react";
 import NumberField from "../common/text-field";
 import RotateClockwiseIcon from "../icons/rotate-clockwise-icon";
+import HorizontalFlipIcon from "../icons/horizontal-flip-icon";
+import VerticalFlipIcon from "../icons/vertical-flip-icon";
+import ResetIcon from "../icons/reset-icon";
 import styles from "./actions-bar.module.css";
 
-const ActionsBar = ({ changeDegrees, changeRotation }) => {
+const ActionsBar = ({
+  changeDegrees,
+  changeRotation,
+  changeIsHorizontallyFlipped,
+  changeIsVerticallyFlipped,
+}) => {
   return (
     <div className={styles.actionsBar}>
       <h3 className={styles.actionsBar__title}>Actions</h3>
@@ -11,8 +19,8 @@ const ActionsBar = ({ changeDegrees, changeRotation }) => {
         <NumberField
           label="Degrees:"
           variant="standard"
-          inputProps={{ fontSize: "15px", width: "50px" }}
-          inputLabelProps={{ fontSize: "12px" }}
+          inputProps={{ fontSize: "15px", width: "45px" }}
+          inputLabelProps={{ fontSize: "10px" }}
           onChange={changeDegrees}
           type="number"
           color="secondary"
@@ -24,6 +32,26 @@ const ActionsBar = ({ changeDegrees, changeRotation }) => {
             onClick={changeRotation}
           />
         </div>
+      </div>
+      <div className={styles.actionsBar__horizontalFlipIcon}>
+        <HorizontalFlipIcon
+          color="secondary"
+          tooltipLabel="Flip horizontally"
+          onClick={changeIsHorizontallyFlipped}
+        />
+      </div>
+      <div className={styles.actionsBar__verticalFlipIcon}>
+        <VerticalFlipIcon
+          color="secondary"
+          tooltipLabel="Flip vertically"
+          onClick={changeIsVerticallyFlipped}
+        />
+      </div>
+      <div className={styles.actionBar__resetIcon}>
+        <ResetIcon
+          color="secondary"
+          tooltipLabel="Reset to original settings"
+        />
       </div>
     </div>
   );
