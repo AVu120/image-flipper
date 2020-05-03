@@ -11,6 +11,7 @@ const ActionsBar = ({
   changeRotation,
   changeIsHorizontallyFlipped,
   changeIsVerticallyFlipped,
+  resetAppState,
 }) => {
   return (
     <div className={styles.actionsBar}>
@@ -51,6 +52,7 @@ const ActionsBar = ({
         <ResetIcon
           color="secondary"
           tooltipLabel="Reset to original settings"
+          onClick={resetAppState}
         />
       </div>
     </div>

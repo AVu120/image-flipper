@@ -82,7 +82,7 @@ function App() {
 
   const changeRotation = () => {
     if (selectedImages.length > 0) {
-      if (degrees && degrees < 360)
+      if (degrees && degrees >= 0 && degrees < 360)
         changeState(setRotation, degrees, degrees, degrees, degrees, rotation);
       else alert("Please enter a number between 0 and 360.");
     } else alert("Please select an image first.");
@@ -109,6 +109,26 @@ function App() {
     );
   };
 
+  const resetAppState = () => {
+    changeState(setRotation, 0, 0, 0, 0, rotation);
+    changeState(
+      setIsHorizontallyFlipped,
+      false,
+      false,
+      false,
+      false,
+      isHorizontallyFlipped
+    );
+    changeState(
+      setIsVerticallyFlipped,
+      false,
+      false,
+      false,
+      false,
+      isVerticallyFlipped
+    );
+  };
+
   return (
     <div className={styles.app}>
       <Title />
@@ -126,6 +146,7 @@ function App() {
           changeRotation={changeRotation}
           changeIsHorizontallyFlipped={changeIsHorizontallyFlipped}
           changeIsVerticallyFlipped={changeIsVerticallyFlipped}
+          resetAppState={resetAppState}
         />
       </div>
       <UrlInput changeUrl={changeUrl} changeDisplayedUrl={changeDisplayedUrl} />
