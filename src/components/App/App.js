@@ -29,32 +29,7 @@ function App() {
   });
   const [selectedImages, setSelectedImages] = useState([]);
 
-  const changeDegrees = (event) => setDegrees(event.target.value);
-  const changeRotation = () => {
-    if (selectedImages.length > 0) {
-      if (degrees && degrees < 360)
-        setRotation({
-          topLeft:
-            selectedImages && selectedImages.includes("topLeft")
-              ? degrees
-              : rotation.topLeft,
-          topRight:
-            selectedImages && selectedImages.includes("topRight")
-              ? degrees
-              : rotation.topRight,
-          bottomLeft:
-            selectedImages && selectedImages.includes("bottomLeft")
-              ? degrees
-              : rotation.bottomLeft,
-          bottomRight:
-            selectedImages && selectedImages.includes("bottomRight")
-              ? degrees
-              : rotation.bottomRight,
-        });
-      else alert("Please enter a number between 0 and 360.");
-    } else alert("Please select an image first.");
-  };
-
+  /* Functions related to image url input. */
   const changeUrl = (event) => setSelectedUrl(event.target.value);
   const changeDisplayedUrl = () => {
     if (selectedUrl.replace(/\s/g, "").length > 0) setDisplayedUrl(selectedUrl);
@@ -73,32 +48,65 @@ function App() {
     setSelectedImages(currentlySelectedImages);
   };
 
-  const flipImage = (setState, state) => {
+  /* Methods related to actions */
+  const changeDegrees = (event) => setDegrees(event.target.value);
+
+  /* Generic function that will be later used to change various image states. */
+  const changeState = (
+    setState,
+    newTopLeftState,
+    newTopRightState,
+    newBottomLeftState,
+    newBottomRightState,
+    originalState
+  ) => {
     setState({
       topLeft:
         selectedImages && selectedImages.includes("topLeft")
-          ? !state.topLeft
-          : state.topLeft,
+          ? newTopLeftState
+          : originalState.topLeft,
       topRight:
         selectedImages && selectedImages.includes("topRight")
-          ? !state.topRight
-          : state.topRight,
+          ? newTopRightState
+          : originalState.topRight,
       bottomLeft:
         selectedImages && selectedImages.includes("bottomLeft")
-          ? !state.bottomLeft
-          : state.bottomLeft,
+          ? newBottomLeftState
+          : originalState.bottomLeft,
       bottomRight:
         selectedImages && selectedImages.includes("bottomRight")
-          ? !state.bottomRight
-          : state.bottomRight,
+          ? newBottomRightState
+          : originalState.bottomRight,
     });
   };
 
+  const changeRotation = () => {
+    if (selectedImages.length > 0) {
+      if (degrees && degrees < 360)
+        changeState(setRotation, degrees, degrees, degrees, degrees, rotation);
+      else alert("Please enter a number between 0 and 360.");
+    } else alert("Please select an image first.");
+  };
+
   const changeIsHorizontallyFlipped = () => {
-    flipImage(setIsHorizontallyFlipped, isHorizontallyFlipped);
+    changeState(
+      setIsHorizontallyFlipped,
+      !isHorizontallyFlipped.topLeft,
+      !isHorizontallyFlipped.topRight,
+      !isHorizontallyFlipped.bottomLeft,
+      !isHorizontallyFlipped.bottomRight,
+      isHorizontallyFlipped
+    );
   };
   const changeIsVerticallyFlipped = () => {
-    flipImage(setIsVerticallyFlipped, isVerticallyFlipped);
+    changeState(
+      setIsVerticallyFlipped,
+      !isVerticallyFlipped.topLeft,
+      !isVerticallyFlipped.topRight,
+      !isVerticallyFlipped.bottomLeft,
+      !isVerticallyFlipped.bottomRight,
+      isVerticallyFlipped
+    );
   };
 
   return (
