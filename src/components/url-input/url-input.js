@@ -1,7 +1,7 @@
 import React from "react";
-import TextField from "../common/text-field";
+import TextField from "../common/inputs/text-field";
 import SearchIcon from "../icons/search-icon";
-import Button from "../common/button";
+import Button from "../common/buttons/button";
 import Grid from "@material-ui/core/Grid";
 import styles from "./url-input.module.css";
 

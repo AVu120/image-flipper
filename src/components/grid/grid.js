@@ -20,7 +20,7 @@ const Grid = ({
   ) => {
     return {
       "--rotation": `rotate(${degrees}deg)`,
-      border: `${
+      "--border": `${
         selectedImages.includes(gridPosition)
           ? style.selectedBorder
           : style.nonSelectedBorder
@@ -43,11 +43,12 @@ const Grid = ({
           isHorizontallyFlipped.topLeft,
           isVerticallyFlipped.topLeft
         )}
-        onClick={() => changeSelectedImages("topLeft")}
       >
         <Image
           className={`${styles.grid__image} ${styles.grid__image_horizontallyFlipped}`}
           url={url}
+          onClick={() => changeSelectedImages("topLeft")}
+          alt={style.alt}
         />
       </div>
       <div
@@ -58,9 +59,13 @@ const Grid = ({
           isHorizontallyFlipped.topRight,
           isVerticallyFlipped.topRight
         )}
-        onClick={() => changeSelectedImages("topRight")}
       >
-        <Image className={styles.grid__image} url={url} />
+        <Image
+          className={styles.grid__image}
+          url={url}
+          onClick={() => changeSelectedImages("topRight")}
+          alt={style.alt}
+        />
       </div>
       <div
         className={styles.grid__imageBorder}
@@ -70,9 +75,13 @@ const Grid = ({
           isHorizontallyFlipped.bottomLeft,
           isVerticallyFlipped.bottomLeft
         )}
-        onClick={() => changeSelectedImages("bottomLeft")}
       >
-        <Image className={styles.grid__image} url={url} />
+        <Image
+          className={styles.grid__image}
+          url={url}
+          onClick={() => changeSelectedImages("bottomLeft")}
+          alt={style.alt}
+        />
       </div>
       <div
         className={styles.grid__imageBorder}
@@ -82,9 +91,13 @@ const Grid = ({
           isHorizontallyFlipped.bottomRight,
           isVerticallyFlipped.bottomRight
         )}
-        onClick={() => changeSelectedImages("bottomRight")}
       >
-        <Image className={styles.grid__image} url={url} />
+        <Image
+          className={styles.grid__image}
+          url={url}
+          onClick={() => changeSelectedImages("bottomRight")}
+          alt={style.alt}
+        />
       </div>
     </div>
   );

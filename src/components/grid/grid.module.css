@@ -6,7 +6,7 @@
 }
 
 .grid__imageBorder {
-  border: 3px solid black;
+  /* border: 3px solid black; */
   height: 400px;
   width: 400px;
   display: flex;
@@ -18,11 +18,8 @@
   height: 300px;
   width: 300px;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
   transform: var(--rotation) var(--horizontalInversion) var(--verticalInversion);
-
-  /* line-height: 50px; */
-  /* text-align: center;
-  padding-top: 50px; */
+  border: var(--border);
+  /* -webkit-filter: invert(100%);
+  filter: invert(100%); */
 }

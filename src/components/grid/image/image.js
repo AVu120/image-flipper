@@ -1,12 +1,10 @@
 import React from "react";
 
-const Image = ({ className, url }) => {
+const Image = ({ className, url, onClick, alt }) => {
   return (
-    <img
-      src={url}
-      className={className}
-      alt="No Image available. Please enter another image url below and click DISPLAY."
-    />
+    <div onClick={onClick}>
+      <img src={url} className={className} alt={alt} />
+    </div>
   );
 };
 

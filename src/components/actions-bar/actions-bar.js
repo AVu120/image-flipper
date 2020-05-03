@@ -1,9 +1,11 @@
 import React from "react";
-import NumberField from "../common/text-field";
+import NumberField from "../common/inputs/text-field";
 import RotateClockwiseIcon from "../icons/rotate-clockwise-icon";
 import HorizontalFlipIcon from "../icons/horizontal-flip-icon";
 import VerticalFlipIcon from "../icons/vertical-flip-icon";
 import ResetIcon from "../icons/reset-icon";
+import Filters from "../common/inputs/dropdown-field";
+import * as style from "./actions-bar.style";
 import styles from "./actions-bar.module.css";
 
 const ActionsBar = ({
@@ -54,6 +56,9 @@ const ActionsBar = ({
           tooltipLabel="Reset to original settings"
           onClick={resetAppState}
         />
+      </div>
+      <div className={styles.actionBar__filters}>
+        <Filters options={style.filters} style={{ width: 150 }} />
       </div>
     </div>
   );
