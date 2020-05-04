@@ -13,13 +13,17 @@
   align-items: center;
   justify-content: center;
 }
+
+.grid__image_selected {
+  border: var(--border);
+  transform: var(--rotation) var(--horizontalInversion) var(--verticalInversion);
+}
+
 .grid__image {
   /* border: 3px solid black; */
   height: 300px;
   width: 300px;
   display: flex;
-  transform: var(--rotation) var(--horizontalInversion) var(--verticalInversion);
-  border: var(--border);
-  /* -webkit-filter: invert(100%);
-  filter: invert(100%); */
+  -webkit-filter: var(--filter);
+  filter: var(--filter);
 }

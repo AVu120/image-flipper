@@ -27,6 +27,12 @@ function App() {
     bottomLeft: false,
     bottomRight: false,
   });
+  const [filters, setFilters] = useState({
+    topLeft: "none",
+    topRight: "none",
+    bottomLeft: "none",
+    bottomRight: "none",
+  });
   const [selectedImages, setSelectedImages] = useState([]);
 
   /* Functions related to image url input. */
@@ -59,7 +65,7 @@ function App() {
     newBottomLeftState,
     newBottomRightState,
     originalState
-  ) => {
+  ) =>
     setState({
       topLeft:
         selectedImages && selectedImages.includes("topLeft")
@@ -78,17 +84,16 @@ function App() {
           ? newBottomRightState
           : originalState.bottomRight,
     });
-  };
 
   const changeRotation = () => {
     if (selectedImages.length > 0) {
-      if (degrees && degrees >= 0 && degrees < 360)
+      if (degrees && degrees > -360 && degrees < 360)
         changeState(setRotation, degrees, degrees, degrees, degrees, rotation);
       else alert("Please enter a number between 0 and 360.");
     } else alert("Please select an image first.");
   };
 
-  const changeIsHorizontallyFlipped = () => {
+  const changeIsHorizontallyFlipped = () =>
     changeState(
       setIsHorizontallyFlipped,
       !isHorizontallyFlipped.topLeft,
@@ -97,8 +102,8 @@ function App() {
       !isHorizontallyFlipped.bottomRight,
       isHorizontallyFlipped
     );
-  };
-  const changeIsVerticallyFlipped = () => {
+
+  const changeIsVerticallyFlipped = () =>
     changeState(
       setIsVerticallyFlipped,
       !isVerticallyFlipped.topLeft,
@@ -107,7 +112,6 @@ function App() {
       !isVerticallyFlipped.bottomRight,
       isVerticallyFlipped
     );
-  };
 
   const resetAppState = () => {
     changeState(setRotation, 0, 0, 0, 0, rotation);
@@ -127,6 +131,21 @@ function App() {
       false,
       isVerticallyFlipped
     );
+    changeState(setFilters, "None", "None", "None", "None", filters);
+  };
+
+  const changeFilters = (event, value) => {
+    if (value && value.title !== null) {
+      const newFilter = value.title;
+      changeState(
+        setFilters,
+        newFilter,
+        newFilter,
+        newFilter,
+        newFilter,
+        filters
+      );
+    }
   };
 
   return (
@@ -140,6 +159,7 @@ function App() {
           selectedImages={selectedImages}
           isHorizontallyFlipped={isHorizontallyFlipped}
           isVerticallyFlipped={isVerticallyFlipped}
+          filters={filters}
         />
         <ActionsBar
           changeDegrees={changeDegrees}
@@ -147,6 +167,7 @@ function App() {
           changeIsHorizontallyFlipped={changeIsHorizontallyFlipped}
           changeIsVerticallyFlipped={changeIsVerticallyFlipped}
           resetAppState={resetAppState}
+          changeFilters={changeFilters}
         />
       </div>
       <UrlInput changeUrl={changeUrl} changeDisplayedUrl={changeDisplayedUrl} />

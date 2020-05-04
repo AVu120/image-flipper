@@ -1,9 +1,9 @@
 import React from "react";
 
-const Image = ({ className, url, onClick, alt }) => {
+const Image = ({ imageClassName, borderClassName, url, onClick, alt }) => {
   return (
-    <div onClick={onClick}>
-      <img src={url} className={className} alt={alt} />
+    <div className={borderClassName} onClick={onClick}>
+      <img src={url} className={imageClassName} alt={alt} />
     </div>
   );
 };

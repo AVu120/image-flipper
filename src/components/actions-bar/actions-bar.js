@@ -14,6 +14,7 @@ const ActionsBar = ({
   changeIsHorizontallyFlipped,
   changeIsVerticallyFlipped,
   resetAppState,
+  changeFilters,
 }) => {
   return (
     <div className={styles.actionsBar}>
@@ -58,7 +59,11 @@ const ActionsBar = ({
         />
       </div>
       <div className={styles.actionBar__filters}>
-        <Filters options={style.filters} style={{ width: 150 }} />
+        <Filters
+          options={style.filters}
+          style={{ width: "auto" }}
+          onChange={changeFilters}
+        />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ const theme = createMuiTheme({
   },
 });
 
-export default function DropDownField({ style, options }) {
+export default function DropDownField({ style, options, onChange }) {
   return (
     <ThemeProvider theme={theme}>
       <Autocomplete
@@ -43,6 +43,7 @@ export default function DropDownField({ style, options }) {
         getOptionLabel={(option) => option.title}
         style={style}
         size="small"
+        onChange={onChange}
         renderInput={(params) => (
           <TextField {...params} label="Filters:" variant="outlined" />
         )}
