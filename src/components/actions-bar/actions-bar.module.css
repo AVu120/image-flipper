@@ -1,20 +1,21 @@
 @import "../app/app.module.css";
 
 .actionsBar {
-  height: 500px;
-  width: 100px;
-  /* border: 3px solid black; */
+  height: 360px;
+  width: 120px;
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  top: 100px;
-  left: 50px;
+  top: 50px;
+  left: 30px;
+  border: 5px double var(--actionColor);
 }
 
 .actionsBar__title {
   color: var(--actionColor);
+  font-family: var(--fontFamily);
+  margin-top: 5px;
 }
 
 .actionsBar__numberField {

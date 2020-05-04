@@ -7,6 +7,8 @@ const useStyles = makeStyles({
   button: {
     // textTransform: "none",
     // fontSize: "",
+    fontFamily: "Open Sans",
+    fontWeight: "bold",
   },
 });
 

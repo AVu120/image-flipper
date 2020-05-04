@@ -12,3 +12,5 @@ export const filters = [
   { title: "Sepia" }, // filter:sepia(100%);
   { title: "Bright-Contrast" }, // filter:contrast(200%) brightness(150%);
 ];
+
+export const actionColor = "#F50057";

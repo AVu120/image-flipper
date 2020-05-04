@@ -1,7 +1,6 @@
 :root {
-  /* --imageHeight: 350px;
-  --imageWidth: 350px; */
   --actionColor: #f50057;
+  --fontFamily: "Open Sans", "Sofia", Arial, Helvetica, sans-serif;
 }
 
 .app {

@@ -7,6 +7,7 @@ import ResetIcon from "../icons/reset-icon";
 import Filters from "../common/inputs/dropdown-field";
 import * as style from "./actions-bar.style";
 import styles from "./actions-bar.module.css";
+import IconButton from "@material-ui/core/IconButton";
 
 const ActionsBar = ({
   changeDegrees,
@@ -30,33 +31,41 @@ const ActionsBar = ({
           color="secondary"
         />
         <div className={styles.actionsBar__rotateIcon}>
-          <RotateClockwiseIcon
-            color="secondary"
-            tooltipLabel="Rotate clockwise"
-            onClick={changeRotation}
-          />
+          <IconButton size="small">
+            <RotateClockwiseIcon
+              color="secondary"
+              tooltipLabel="Rotate clockwise"
+              onClick={changeRotation}
+            />
+          </IconButton>
         </div>
       </div>
       <div className={styles.actionsBar__horizontalFlipIcon}>
-        <HorizontalFlipIcon
-          color="secondary"
-          tooltipLabel="Flip horizontally"
-          onClick={changeIsHorizontallyFlipped}
-        />
+        <IconButton size="small">
+          <HorizontalFlipIcon
+            color="secondary"
+            tooltipLabel="Flip horizontally"
+            onClick={changeIsHorizontallyFlipped}
+          />
+        </IconButton>
       </div>
       <div className={styles.actionsBar__verticalFlipIcon}>
-        <VerticalFlipIcon
-          color="secondary"
-          tooltipLabel="Flip vertically"
-          onClick={changeIsVerticallyFlipped}
-        />
+        <IconButton size="small">
+          <VerticalFlipIcon
+            color="secondary"
+            tooltipLabel="Flip vertically"
+            onClick={changeIsVerticallyFlipped}
+          />
+        </IconButton>
       </div>
       <div className={styles.actionBar__resetIcon}>
-        <ResetIcon
-          color="secondary"
-          tooltipLabel="Reset to original settings"
-          onClick={resetAppState}
-        />
+        <IconButton size="small">
+          <ResetIcon
+            color="secondary"
+            tooltipLabel="Reset to original settings"
+            onClick={resetAppState}
+          />
+        </IconButton>
       </div>
       <div className={styles.actionBar__filters}>
         <Filters

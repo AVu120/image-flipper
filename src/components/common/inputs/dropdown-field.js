@@ -2,6 +2,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import * as style from "../../actions-bar/actions-bar.style";
 
 const theme = createMuiTheme({
   overrides: {
@@ -12,14 +13,14 @@ const theme = createMuiTheme({
           borderColor: "rgba(0, 0, 0, 0.23)",
         },
         "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
-          borderColor: "#F50057",
+          borderColor: style.actionColor,
           // Reset on touch devices, it doesn't add specificity
           "@media (hover: none)": {
             borderColor: "rgba(0, 0, 0, 0.23)",
           },
         },
         "&$focused $notchedOutline": {
-          borderColor: "#F50057",
+          borderColor: style.actionColor,
           borderWidth: 1,
         },
       },
@@ -27,8 +28,9 @@ const theme = createMuiTheme({
     MuiFormLabel: {
       root: {
         "&$focused": {
-          color: "#F50057",
+          color: style.actionColor,
         },
+        fontSize: 13,
       },
     },
   },

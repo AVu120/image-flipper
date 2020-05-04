@@ -3,6 +3,7 @@
 .grid {
   display: grid;
   grid-template-columns: auto auto;
+  margin: 0;
 }
 
 .grid__imageBorder {
