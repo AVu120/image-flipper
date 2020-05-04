@@ -93,59 +93,69 @@ function App() {
     } else alert("Please select an image first.");
   };
 
-  const changeIsHorizontallyFlipped = () =>
-    changeState(
-      setIsHorizontallyFlipped,
-      !isHorizontallyFlipped.topLeft,
-      !isHorizontallyFlipped.topRight,
-      !isHorizontallyFlipped.bottomLeft,
-      !isHorizontallyFlipped.bottomRight,
-      isHorizontallyFlipped
-    );
+  const changeIsHorizontallyFlipped = () => {
+    if (selectedImages.length > 0)
+      changeState(
+        setIsHorizontallyFlipped,
+        !isHorizontallyFlipped.topLeft,
+        !isHorizontallyFlipped.topRight,
+        !isHorizontallyFlipped.bottomLeft,
+        !isHorizontallyFlipped.bottomRight,
+        isHorizontallyFlipped
+      );
+    else alert("Please select an image first.");
+  };
 
-  const changeIsVerticallyFlipped = () =>
-    changeState(
-      setIsVerticallyFlipped,
-      !isVerticallyFlipped.topLeft,
-      !isVerticallyFlipped.topRight,
-      !isVerticallyFlipped.bottomLeft,
-      !isVerticallyFlipped.bottomRight,
-      isVerticallyFlipped
-    );
+  const changeIsVerticallyFlipped = () => {
+    if (selectedImages.length > 0)
+      changeState(
+        setIsVerticallyFlipped,
+        !isVerticallyFlipped.topLeft,
+        !isVerticallyFlipped.topRight,
+        !isVerticallyFlipped.bottomLeft,
+        !isVerticallyFlipped.bottomRight,
+        isVerticallyFlipped
+      );
+    else alert("Please select an image first.");
+  };
 
   const resetAppState = () => {
-    changeState(setRotation, 0, 0, 0, 0, rotation);
-    changeState(
-      setIsHorizontallyFlipped,
-      false,
-      false,
-      false,
-      false,
-      isHorizontallyFlipped
-    );
-    changeState(
-      setIsVerticallyFlipped,
-      false,
-      false,
-      false,
-      false,
-      isVerticallyFlipped
-    );
-    changeState(setFilters, "None", "None", "None", "None", filters);
+    if (selectedImages.length > 0) {
+      changeState(setRotation, 0, 0, 0, 0, rotation);
+      changeState(
+        setIsHorizontallyFlipped,
+        false,
+        false,
+        false,
+        false,
+        isHorizontallyFlipped
+      );
+      changeState(
+        setIsVerticallyFlipped,
+        false,
+        false,
+        false,
+        false,
+        isVerticallyFlipped
+      );
+      changeState(setFilters, "None", "None", "None", "None", filters);
+    } else alert("Please select an image first.");
   };
 
   const changeFilters = (event, value) => {
-    if (value && value.title !== null) {
-      const newFilter = value.title;
-      changeState(
-        setFilters,
-        newFilter,
-        newFilter,
-        newFilter,
-        newFilter,
-        filters
-      );
-    }
+    if (selectedImages.length > 0) {
+      if (value && value.title !== null) {
+        const newFilter = value.title;
+        changeState(
+          setFilters,
+          newFilter,
+          newFilter,
+          newFilter,
+          newFilter,
+          filters
+        );
+      }
+    } else alert("Please select an image first.");
   };
 
   return (
