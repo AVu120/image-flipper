@@ -40,7 +40,7 @@ function App() {
   const [selectedImages, setSelectedImages] = useState([]);
 
   /* Functions related to image url input. */
-  const changeUrl = (event) => setSelectedUrl(event.target.value);
+  const changeSelectedUrl = (event) => setSelectedUrl(event.target.value);
   const changeDisplayedUrl = () => {
     if (selectedUrl.replace(/\s/g, "").length > 0) setDisplayedUrl(selectedUrl);
     else alert("Please enter an image url before clicking DISPLAY.");
@@ -185,9 +185,9 @@ function App() {
         />
       </div>
       <UrlInput
-        changeUrl={changeUrl}
+        changeSelectedUrl={changeSelectedUrl}
         changeDisplayedUrl={changeDisplayedUrl}
-        displayedUrl={displayedUrl}
+        selectedUrl={selectedUrl}
       />
     </div>
   );
