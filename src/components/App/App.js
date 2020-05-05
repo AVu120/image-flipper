@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import styles from "./app.module.css";
+import styles from "./App.module.css";
 import Title from "../title/title";
 import Grid from "../grid/grid";
 import ActionsBar from "../actions-bar/actions-bar";
 import UrlInput from "../url-input/url-input";
 
 function App() {
-  const [selectedUrl, setSelectedUrl] = useState("");
-  const [displayedUrl, setDisplayedUrl] = useState("");
+  const [selectedUrl, setSelectedUrl] = useState(
+    "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TdPokmDzMQVHdyG_6-iNrwHaFj%26pid%3DApi&f=1"
+  );
+  const [displayedUrl, setDisplayedUrl] = useState(
+    "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TdPokmDzMQVHdyG_6-iNrwHaFj%26pid%3DApi&f=1"
+  );
   const [degrees, setDegrees] = useState(null);
   const [rotation, setRotation] = useState({
     topLeft: 0,
@@ -180,7 +184,11 @@ function App() {
           changeFilters={changeFilters}
         />
       </div>
-      <UrlInput changeUrl={changeUrl} changeDisplayedUrl={changeDisplayedUrl} />
+      <UrlInput
+        changeUrl={changeUrl}
+        changeDisplayedUrl={changeDisplayedUrl}
+        displayedUrl={displayedUrl}
+      />
     </div>
   );
 }

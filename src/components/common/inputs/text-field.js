@@ -9,10 +9,12 @@ const TextFieldComponent = ({
   variant,
   type,
   color,
+  value,
 }) => {
   return (
     <div>
       <TextField
+        value={value}
         label={label}
         onChange={onChange}
         InputProps={{

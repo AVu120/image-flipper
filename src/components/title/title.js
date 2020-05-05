@@ -12,7 +12,8 @@ const Title = () => {
           <div>
             <h3>Instructions:</h3>
             <p>
-              1. Enter image url into bottom input and click DISPLAY button.
+              1. Enter image url into bottom input and click DISPLAY button to
+              display another image.
             </p>
             <p>
               2. Select one or multiple images by clicking on them (selected

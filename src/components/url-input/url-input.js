@@ -4,7 +4,7 @@ import Button from "../common/buttons/button";
 import Grid from "@material-ui/core/Grid";
 import styles from "./url-input.module.css";
 
-const UrlInput = ({ changeUrl, changeDisplayedUrl }) => {
+const UrlInput = ({ changeUrl, changeDisplayedUrl, displayedUrl }) => {
   return (
     <div className={styles.urlInputContainer}>
       <Grid container spacing={1} alignItems="flex-end">
@@ -13,6 +13,7 @@ const UrlInput = ({ changeUrl, changeDisplayedUrl }) => {
             label="Enter image URL:"
             onChange={changeUrl}
             inputProps={{ width: "300px" }}
+            value={displayedUrl}
             variant="standard"
             type="text"
             color="secondary"
