@@ -3,15 +3,16 @@
 }
 
 .title__text {
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 6vh;
   font-family: "Sofia", Georgia, "Times New Roman", Times, serif;
-  margin: 0px;
+  margin: 0;
 }
 
 .title__helpIcon {
   position: relative;
-  left: 15px;
-  top: 30px;
+  top: 3.5vh;
+  left: 1vw;
 }
 
 p {
