@@ -14,3 +14,4 @@ export const filters = [
 ];
 
 export const actionColor = "#F50057";
+export const iconButtonSize = "small";

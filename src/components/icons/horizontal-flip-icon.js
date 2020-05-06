@@ -1,14 +1,17 @@
 import React from "react";
 import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import Tooltip from "@material-ui/core/Tooltip";
+import IconButton from "@material-ui/core/IconButton";
 
-const HorizontalFlipIcon = ({ color, tooltipLabel, onClick }) => {
+const HorizontalFlipIcon = ({ color, tooltipLabel, onClick, buttonSize }) => {
   const disabled = tooltipLabel ? false : true;
   return (
     <div>
-      <Tooltip disableHoverListener={disabled} title={tooltipLabel}>
-        <SyncAltIcon color={color} onClick={onClick} />
-      </Tooltip>
+      <IconButton size={buttonSize}>
+        <Tooltip disableHoverListener={disabled} title={tooltipLabel}>
+          <SyncAltIcon color={color} onClick={onClick} />
+        </Tooltip>
+      </IconButton>
     </div>
   );
 };

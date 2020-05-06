@@ -1,54 +1,71 @@
 @import "../App/App.module.css";
+:root {
+  --margin: 1vh 0;
+}
 
 .actionsBar {
-  height: 360px;
-  width: 120px;
+  height: 35vh;
+  width: 6.5vw;
   position: relative;
+  top: 5.5vh;
+  left: 1vw;
+  /* border: 0.5vh double var(--actionColor); */
+  padding: 1vh 0;
+}
+
+.actionBar__actionsContainer {
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 50px;
-  left: 30px;
-  border: 5px double var(--actionColor);
+  justify-content: center;
 }
-
 .actionsBar__title {
   color: var(--actionColor);
   font-family: var(--fontFamily);
-  margin-top: 5px;
+  /* margin: 0.7vh; */
+  font-size: 2vh;
+  margin: var(--margin);
 }
 
 .actionsBar__numberField {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: var(--margin);
 }
 
 .actionsBar__rotateIcon {
   position: relative;
-  top: 10px;
+  /* top: 1vh; */
   cursor: pointer;
+  margin: var(--margin);
 }
 
 .actionsBar__horizontalFlipIcon {
   cursor: pointer;
   position: relative;
-  top: 30px;
+  margin: var(--margin);
+  /* top: 3vh; */
 }
 
 .actionsBar__verticalFlipIcon {
   cursor: pointer;
   position: relative;
-  top: 50px;
+  /* top: 5vh; */
+  margin: var(--margin);
 }
 
 .actionBar__resetIcon {
   cursor: pointer;
   position: relative;
-  top: 70px;
+  /* top: 7vh; */
+  margin: var(--margin);
 }
 
 .actionBar__filters {
   position: relative;
-  top: 90px;
+  /* top: 9vh; */
+  /* margin-bottom: 1vh; */
+  margin: var(--margin);
 }

@@ -1,12 +1,14 @@
 .urlInputContainer {
   position: relative;
-  top: -15px;
-  left: 10px;
+  top: 0vh;
+  left: 1vw;
   display: flex;
 }
 
 .urlInputContainer__button {
   position: relative;
-  top: 12px;
-  left: 10px;
+  top: 1.5vh;
+  left: 0.7vw;
+  /* height: 3.7vh; */
+  width: 4.5vw;
 }

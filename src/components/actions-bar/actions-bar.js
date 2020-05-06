@@ -1,13 +1,12 @@
 import React from "react";
-import NumberField from "../common/inputs/text-field";
-import RotateClockwiseIcon from "../icons/rotate-clockwise-icon";
-import HorizontalFlipIcon from "../icons/horizontal-flip-icon";
-import VerticalFlipIcon from "../icons/vertical-flip-icon";
-import ResetIcon from "../icons/reset-icon";
 import Filters from "../common/inputs/dropdown-field";
-import * as style from "./actions-bar.style";
+import NumberField from "../common/inputs/text-field";
+import HorizontalFlipIcon from "../icons/horizontal-flip-icon";
+import ResetIcon from "../icons/reset-icon";
+import RotateClockwiseIcon from "../icons/rotate-clockwise-icon";
+import VerticalFlipIcon from "../icons/vertical-flip-icon";
 import styles from "./actions-bar.module.css";
-import IconButton from "@material-ui/core/IconButton";
+import * as style from "./actions-bar.style";
 
 const ActionsBar = ({
   changeDegrees,
@@ -19,60 +18,58 @@ const ActionsBar = ({
 }) => {
   return (
     <div className={styles.actionsBar}>
-      <h3 className={styles.actionsBar__title}>Actions</h3>
-      <div className={styles.actionsBar__numberField}>
-        <NumberField
-          label="Degrees:"
-          variant="standard"
-          inputProps={{ fontSize: "15px", width: "45px" }}
-          inputLabelProps={{ fontSize: "10px" }}
-          onChange={changeDegrees}
-          type="number"
-          color="secondary"
-        />
-        <div className={styles.actionsBar__rotateIcon}>
-          <IconButton size="small">
+      <div className={styles.actionBar__actionsContainer}>
+        <h3 className={styles.actionsBar__title}>Actions</h3>
+        <div className={styles.actionsBar__numberField}>
+          <NumberField
+            label="Degrees:"
+            variant="standard"
+            inputProps={{ fontSize: "1.5vh", width: "2vw" }}
+            inputLabelProps={{ fontSize: "1.1vh" }}
+            onChange={changeDegrees}
+            type="number"
+            color="secondary"
+          />
+          <div className={styles.actionsBar__rotateIcon}>
             <RotateClockwiseIcon
               color="secondary"
               tooltipLabel="Rotate clockwise"
               onClick={changeRotation}
+              buttonSize={style.iconButtonSize}
             />
-          </IconButton>
+          </div>
         </div>
-      </div>
-      <div className={styles.actionsBar__horizontalFlipIcon}>
-        <IconButton size="small">
+        <div className={styles.actionsBar__horizontalFlipIcon}>
           <HorizontalFlipIcon
             color="secondary"
             tooltipLabel="Flip horizontally"
             onClick={changeIsHorizontallyFlipped}
+            buttonSize={style.iconButtonSize}
           />
-        </IconButton>
-      </div>
-      <div className={styles.actionsBar__verticalFlipIcon}>
-        <IconButton size="small">
+        </div>
+        <div className={styles.actionsBar__verticalFlipIcon}>
           <VerticalFlipIcon
             color="secondary"
             tooltipLabel="Flip vertically"
             onClick={changeIsVerticallyFlipped}
+            buttonSize={style.iconButtonSize}
           />
-        </IconButton>
-      </div>
-      <div className={styles.actionBar__resetIcon}>
-        <IconButton size="small">
+        </div>
+        <div className={styles.actionBar__resetIcon}>
           <ResetIcon
             color="secondary"
             tooltipLabel="Reset to original settings"
             onClick={resetAppState}
+            buttonSize={style.iconButtonSize}
           />
-        </IconButton>
-      </div>
-      <div className={styles.actionBar__filters}>
-        <Filters
-          options={style.filters}
-          style={{ width: "auto" }}
-          onChange={changeFilters}
-        />
+        </div>
+        <div className={styles.actionBar__filters}>
+          <Filters
+            options={style.filters}
+            style={{ width: "5.7vw" }}
+            onChange={changeFilters}
+          />
+        </div>
       </div>
     </div>
   );
