@@ -49,7 +49,6 @@ export default function DropDownField({
   const useStyles = makeStyles((theme) => ({
     inputRoot: inputStyle,
     listbox: listboxStyle,
-    groupLabel: { position: "relative", bottom: "1vh" },
   }));
 
   const classes = useStyles();
