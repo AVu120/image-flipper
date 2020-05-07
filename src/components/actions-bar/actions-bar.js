@@ -24,7 +24,7 @@ const ActionsBar = ({
           <NumberField
             label="Degrees:"
             variant="standard"
-            inputProps={{ fontSize: "1.5vh", width: "2vw" }}
+            inputProps={{ fontSize: "1.5vh", width: "40px" }}
             inputLabelProps={{ fontSize: "1.1vh" }}
             onChange={changeDegrees}
             type="number"
@@ -67,6 +67,7 @@ const ActionsBar = ({
           <Filters
             options={style.filters}
             style={{ width: "5.7vw" }}
+            size="small"
             onChange={changeFilters}
           />
         </div>

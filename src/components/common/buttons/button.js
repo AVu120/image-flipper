@@ -9,6 +9,8 @@ const useStyles = makeStyles({
     // fontSize: "",
     fontFamily: "Open Sans",
     fontWeight: "bold",
+    fontSize: "1.7vh",
+    padding: "0.5vh",
   },
 });
 

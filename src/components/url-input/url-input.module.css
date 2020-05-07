@@ -7,8 +7,6 @@
 
 .urlInputContainer__button {
   position: relative;
-  top: 1.5vh;
-  left: 0.7vw;
-  /* height: 3.7vh; */
-  width: 4.5vw;
+  top: 1.2vh;
+  left: 0.8vw;
 }

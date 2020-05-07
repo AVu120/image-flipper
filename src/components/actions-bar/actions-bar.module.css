@@ -9,7 +9,6 @@
   position: relative;
   top: 5.5vh;
   left: 1vw;
-  /* border: 0.5vh double var(--actionColor); */
   padding: 1vh 0;
 }
 
@@ -23,7 +22,6 @@
 .actionsBar__title {
   color: var(--actionColor);
   font-family: var(--fontFamily);
-  /* margin: 0.7vh; */
   font-size: 2vh;
   margin: var(--margin);
 }
@@ -37,7 +35,6 @@
 
 .actionsBar__rotateIcon {
   position: relative;
-  /* top: 1vh; */
   cursor: pointer;
   margin: var(--margin);
 }
@@ -46,26 +43,21 @@
   cursor: pointer;
   position: relative;
   margin: var(--margin);
-  /* top: 3vh; */
 }
 
 .actionsBar__verticalFlipIcon {
   cursor: pointer;
   position: relative;
-  /* top: 5vh; */
   margin: var(--margin);
 }
 
 .actionBar__resetIcon {
   cursor: pointer;
   position: relative;
-  /* top: 7vh; */
   margin: var(--margin);
 }
 
 .actionBar__filters {
   position: relative;
-  /* top: 9vh; */
-  /* margin-bottom: 1vh; */
   margin: var(--margin);
 }

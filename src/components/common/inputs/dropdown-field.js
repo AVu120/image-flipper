@@ -1,7 +1,11 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+} from "@material-ui/core/styles";
 import * as style from "../../actions-bar/actions-bar.style";
 
 const theme = createMuiTheme({
@@ -33,19 +37,29 @@ const theme = createMuiTheme({
         fontSize: 13,
       },
     },
+    inputRoot: {
+      height: "300px",
+    },
   },
 });
 
-export default function DropDownField({ style, options, onChange }) {
+const useStyles = makeStyles({
+  root: {
+    height: "1000px",
+  },
+});
+
+export default function DropDownField({ style, size, options, onChange }) {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <Autocomplete
         id="auto-dropdown"
         options={options}
         getOptionLabel={(option) => option.title}
-        style={style}
-        size="small"
         onChange={onChange}
+        size={size}
+        style={style}
         renderInput={(params) => (
           <TextField {...params} label="Filters:" variant="outlined" />
         )}
