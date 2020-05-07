@@ -37,29 +37,30 @@ const theme = createMuiTheme({
         fontSize: 13,
       },
     },
-    inputRoot: {
-      height: "300px",
-    },
   },
 });
 
-const useStyles = makeStyles({
-  root: {
-    height: "1000px",
-  },
-});
+export default function DropDownField({
+  inputStyle,
+  listboxStyle,
+  options,
+  onChange,
+}) {
+  const useStyles = makeStyles((theme) => ({
+    inputRoot: inputStyle,
+    listbox: listboxStyle,
+    groupLabel: { position: "relative", bottom: "1vh" },
+  }));
 
-export default function DropDownField({ style, size, options, onChange }) {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <Autocomplete
         id="auto-dropdown"
+        classes={classes}
         options={options}
         getOptionLabel={(option) => option.title}
         onChange={onChange}
-        size={size}
-        style={style}
         renderInput={(params) => (
           <TextField {...params} label="Filters:" variant="outlined" />
         )}

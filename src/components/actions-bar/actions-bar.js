@@ -70,8 +70,8 @@ const ActionsBar = ({
         <div className={styles.actionBar__filters}>
           <Filters
             options={style.filters}
-            style={{ width: "5.7vw" }}
-            size="small"
+            inputStyle={{ fontSize: "1.5vh", width: "5.7vw", height: "5vh" }}
+            listboxStyle={{ fontSize: "1.5vh" }}
             onChange={changeFilters}
           />
         </div>
