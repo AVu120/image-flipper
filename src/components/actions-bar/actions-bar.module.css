@@ -4,12 +4,13 @@
 }
 
 .actionsBar {
-  height: 35vh;
+  height: 37vh;
   width: 6.5vw;
   position: relative;
-  top: 5.5vh;
+  top: 2.5vh;
   left: 1vw;
   padding: 1vh 0;
+  /* border: 0.5vh double var(--actionColor); */
 }
 
 .actionBar__actionsContainer {
@@ -22,7 +23,9 @@
 .actionsBar__title {
   color: var(--actionColor);
   font-family: var(--fontFamily);
-  font-size: 2vh;
+  font-size: 3vh;
+  position: relative;
+  top: 2vh;
   margin: var(--margin);
 }
 
@@ -35,6 +38,8 @@
 
 .actionsBar__rotateIcon {
   position: relative;
+  left: 0.1vw;
+  top: 1vh;
   cursor: pointer;
   margin: var(--margin);
 }

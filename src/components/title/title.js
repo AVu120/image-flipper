@@ -26,7 +26,10 @@ const Title = () => {
           </div>
         }
       >
-        <HelpIcon className={styles.title__helpIcon} />
+        <HelpIcon
+          className={styles.title__helpIcon}
+          style={{ fontSize: "3vh" }}
+        />
       </Tooltip>
     </div>
   );

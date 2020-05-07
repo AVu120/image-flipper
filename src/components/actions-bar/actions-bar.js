@@ -35,7 +35,8 @@ const ActionsBar = ({
               color="secondary"
               tooltipLabel="Rotate clockwise"
               onClick={changeRotation}
-              buttonSize={style.iconButtonSize}
+              style={style.iconSize}
+              buttonSize="small"
             />
           </div>
         </div>
@@ -45,6 +46,7 @@ const ActionsBar = ({
             tooltipLabel="Flip horizontally"
             onClick={changeIsHorizontallyFlipped}
             buttonSize={style.iconButtonSize}
+            style={style.iconSize}
           />
         </div>
         <div className={styles.actionsBar__verticalFlipIcon}>
@@ -53,6 +55,7 @@ const ActionsBar = ({
             tooltipLabel="Flip vertically"
             onClick={changeIsVerticallyFlipped}
             buttonSize={style.iconButtonSize}
+            style={style.iconSize}
           />
         </div>
         <div className={styles.actionBar__resetIcon}>
@@ -61,6 +64,7 @@ const ActionsBar = ({
             tooltipLabel="Reset to original settings"
             onClick={resetAppState}
             buttonSize={style.iconButtonSize}
+            style={style.iconSize}
           />
         </div>
         <div className={styles.actionBar__filters}>

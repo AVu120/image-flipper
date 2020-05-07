@@ -15,3 +15,4 @@ export const filters = [
 
 export const actionColor = "#F50057";
 export const iconButtonSize = "small";
+export const iconSize = { fontSize: "3vh" };
