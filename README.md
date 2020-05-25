@@ -1,6 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### View this application running at: https://codesandbox.io/s/github/AVu120/image-flipper
+### Run application at: https://avu120.github.io/countdown-timer/
+
+### Edit/fork CodeSandbox at: https://codesandbox.io/s/o27w2
+
+### Browse CodeSandbox (read-only) at: https://codesandbox.io/s/github/AVu120/image-flipper
 
 ### To manually run this project:
 
