@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/image-flipper/static/css/main.5583f6e8.chunk.css",
+    "main.js": "/image-flipper/static/js/main.f75aa76f.chunk.js",
+    "main.js.map": "/image-flipper/static/js/main.f75aa76f.chunk.js.map",
+    "runtime-main.js": "/image-flipper/static/js/runtime-main.49969496.js",
+    "runtime-main.js.map": "/image-flipper/static/js/runtime-main.49969496.js.map",
+    "static/js/2.28ffd0f3.chunk.js": "/image-flipper/static/js/2.28ffd0f3.chunk.js",
+    "static/js/2.28ffd0f3.chunk.js.map": "/image-flipper/static/js/2.28ffd0f3.chunk.js.map",
+    "index.html": "/image-flipper/index.html",
+    "precache-manifest.906dcfbe9308c0058f467a5d805f6fb3.js": "/image-flipper/precache-manifest.906dcfbe9308c0058f467a5d805f6fb3.js",
+    "service-worker.js": "/image-flipper/service-worker.js",
+    "static/css/main.5583f6e8.chunk.css.map": "/image-flipper/static/css/main.5583f6e8.chunk.css.map",
+    "static/js/2.28ffd0f3.chunk.js.LICENSE.txt": "/image-flipper/static/js/2.28ffd0f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49969496.js",
+    "static/js/2.28ffd0f3.chunk.js",
+    "static/css/main.5583f6e8.chunk.css",
+    "static/js/main.f75aa76f.chunk.js"
+  ]
+}
