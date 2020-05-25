@@ -1,10 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to Run Application
+
 ### Run application at: https://AVu120.github.io/image-flipper
 
 ### View/edit/fork CodeSandbox at: https://codesandbox.io/s/github/AVu120/image-flipper
 
-### To manually run this project:
+## Application Set Up:
 
 ### `git clone https://github.com/AVu120/image-flipper.git`
 
