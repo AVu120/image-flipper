@@ -2,9 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Run application at: https://AVu120.github.io/image-flipper
 
-### Edit/fork CodeSandbox at: https://codesandbox.io/s/o27w2
-
-### Browse CodeSandbox (read-only) at: https://codesandbox.io/s/github/AVu120/image-flipper
+### View/edit/fork CodeSandbox at: https://codesandbox.io/s/github/AVu120/image-flipper
 
 ### To manually run this project:
 
