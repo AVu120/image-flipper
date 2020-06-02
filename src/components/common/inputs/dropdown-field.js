@@ -60,6 +60,7 @@ export default function DropDownField({
         options={options}
         getOptionLabel={(option) => option.title}
         onChange={onChange}
+        size="small"
         renderInput={(params) => (
           <TextField {...params} label="Filters:" variant="outlined" />
         )}

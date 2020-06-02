@@ -12,7 +12,7 @@ const UrlInput = ({ changeSelectedUrl, changeDisplayedUrl, selectedUrl }) => {
           <TextField
             label="Enter image URL:"
             onChange={changeSelectedUrl}
-            inputProps={{ height: "3.5vh", width: "15vw", fontSize: "1.5vh" }}
+            inputProps={{ height: "3.5vh", width: "25vw", fontSize: "1.5vh" }}
             inputLabelProps={{ fontSize: "1.5vh" }}
             value={selectedUrl}
             variant="standard"
