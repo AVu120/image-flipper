@@ -24,10 +24,10 @@ const ActionsBar = ({
           <NumberField
             label="Degrees:"
             variant="standard"
-            inputProps={{ fontSize: "1.5vh", width: "40px" }}
-            inputLabelProps={{ fontSize: "1.1vh" }}
+            inputProps={{ fontSize: "0.8em", width: "50px" }}
+            inputLabelProps={{ fontSize: "0.8em" }}
             onChange={changeDegrees}
-            type="number"
+            type="text"
             color="secondary"
           />
           <div className={styles.actionsBar__rotateIcon}>
@@ -70,9 +70,9 @@ const ActionsBar = ({
         <div className={styles.actionBar__filters}>
           <Filters
             options={style.filters}
-            inputStyle={{ fontSize: "1.1vh", width: "5.7vw" }}
-            // inputStyle={{ fontSize: "1.1vh", width: "5.7vw", height: "5vh" }}
-            listboxStyle={{ fontSize: "1.1vh" }}
+            inputStyle={{ fontSize: "1em", minWidth: "100px", width: "5.7vw" }}
+            // inputStyle={{ fontSize: "1em", width: "5.7vw", height: "5vh" }}
+            listboxStyle={{ fontSize: "1em" }}
             onChange={changeFilters}
           />
         </div>
