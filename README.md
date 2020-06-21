@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Image Flipper
+
+![image](https://user-images.githubusercontent.com/38395166/85216429-d0226400-b3c7-11ea-94ed-446cbf6d3644.png)
 
 ## How to Run Application
 
@@ -17,6 +19,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `npm start`
 
 Then open http://localhost:3000 in a browser.
+
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
