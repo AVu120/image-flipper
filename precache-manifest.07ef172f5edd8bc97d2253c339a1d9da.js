@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3130ff89fe7309e02e039dbc2c3d7d08",
+    "revision": "014680964c3b29aa8d6dfb7ffd4ff6ee",
     "url": "/image-flipper/index.html"
   },
   {
-    "revision": "9b983afc1e66aad42771",
-    "url": "/image-flipper/static/css/main.5583f6e8.chunk.css"
+    "revision": "4ce7e8be34311672fa93",
+    "url": "/image-flipper/static/css/main.d6a6dc0d.chunk.css"
   },
   {
     "revision": "c2768e645e8d9839b746",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/image-flipper/static/js/2.28ffd0f3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9b983afc1e66aad42771",
-    "url": "/image-flipper/static/js/main.7941284a.chunk.js"
+    "revision": "4ce7e8be34311672fa93",
+    "url": "/image-flipper/static/js/main.5ea7d1a3.chunk.js"
   },
   {
     "revision": "833cbec25c582d255538",
