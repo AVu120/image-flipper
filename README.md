@@ -1,6 +1,8 @@
-# Image Flipper
+<h1 align="center">Image Flipper</h1>
 
 ![image](https://user-images.githubusercontent.com/38395166/85216429-d0226400-b3c7-11ea-94ed-446cbf6d3644.png)
+
+Play with this app at https://avu120.github.io/image-flipper/.
 
 ## Description
 
